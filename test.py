@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/',methods=["GET"])
 @cross_origin(origins="*")
 def data():
-    cars = pd.read_csv('files/Cleaned_Car_data.csv')
+    cars = pd.read_csv('Cleaned_Car_data.csv')
     cars = cars.to_numpy()
     cars_list = []
     for car in cars:
